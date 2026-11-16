@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f7f3" />
+    <meta name="description" content="Katalog produk penggaris dengan asisten pencarian berbasis data produk." />
+    <title>Katalog Penggaris — Temukan alat tulis yang tepat</title>
+    <link rel="preconnect" href="https://down-id.img.susercontent.com" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#beranda" aria-label="Katalog Penggaris, beranda">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <span>Katalog<span class="brand-light">Penggaris</span></span>
+      </a>
+      <nav><a href="#produk">Produk</a><a href="#tentang">Tentang katalog</a></nav>
+      <a class="top-cta" href="#produk">Jelajahi katalog <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="beranda">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> KATALOG PILIHAN · ALAT TULIS</p>
+          <h1>Ukur ide.<br /><em>Wujudkan karya.</em></h1>
+          <p class="hero-description">Temukan penggaris yang pas untuk belajar, menggambar, dan berkarya. Tanya asisten katalog untuk mencari produk berdasarkan ukuran atau jenis.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#produk">Lihat semua produk <span aria-hidden="true">↓</span></a>
+            <button class="button button-quiet" id="ask-hero" type="button"><span class="sparkle" aria-hidden="true">✳</span> Tanya asisten</button>
+          </div>
+          <div class="hero-proof"><div class="proof-avatars" aria-hidden="true"><span>30</span><span>15</span><span>↗</span></div><span><strong id="hero-count">—</strong> pilihan untuk mulai berkarya</span></div>
+        </div>
+        <div class="hero-art" aria-label="Ilustrasi penggaris dan alat gambar" role="img">
+          <div class="art-sun"></div><div class="art-note note-one">IDE YANG TERUKUR</div>
+          <div class="ruler ruler-back"><span></span></div><div class="ruler ruler-main"><div class="ruler-label">BUTTERFLY · 30 CM</div><div class="ruler-ticks"></div></div>
+          <div class="art-pencil"></div><div class="art-note note-two">01 — 60 CM</div><div class="art-caption">ALAT KECIL,<br />KEMUNGKINAN BESAR.</div>
+          <span class="art-star star-one">✳</span><span class="art-star star-two">✳</span>
+        </div>
+        <div class="hero-bottom"><span>DIRANCANG UNTUK IDE BESAR</span><span>01 / KATALOG PRODUK</span></div>
+      </section>
+
+      <section class="catalog-section" id="produk">
+        <div class="section-heading">
+          <div><p class="eyebrow">PILIHAN UNTUK SETIAP GARIS</p><h2>Temukan <em>ukuranmu.</em></h2></div>
+          <p class="section-intro">Dari garis pertama sampai detail terakhir, mulai dari alat yang tepat.</p>
+        </div>
+        <div class="catalog-tools">
+          <label class="search-box"><span aria-hidden="true">⌕</span><input id="product-search" type="search" placeholder="Cari ukuran, bahan, atau model..." autocomplete="off" /><kbd>/</kbd></label>
+          <div class="filter-row"><span class="filter-label">KATEGORI</span><button class="filter-chip active" data-category="all">Semua <span id="product-count">—</span></button><button class="filter-chip" data-category="Penggaris">Penggaris</button></div>
+          <label class="sort-label">URUTKAN <select id="product-sort"><option value="featured">Pilihan</option><option value="price-asc">Harga: rendah ke tinggi</option><option value="price-desc">Harga: tinggi ke rendah</option><option value="rating">Rating tertinggi</option></select></label>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite"><div class="loading-state">Menyiapkan katalog…</div></div>
+        <p class="catalog-note" id="catalog-note"></p>
+      </section>
+
+      <section class="about-section" id="tentang">
+        <div class="about-mark">P.</div><div><p class="eyebrow">DIBANGUN DARI DATA PRODUK</p><h2>Informasi produk,<br /><em>lebih mudah ditemukan.</em></h2></div>
+        <p class="about-copy">Asisten katalog mencari produk yang relevan dari daftar produk, lalu menyusun jawaban dari informasi yang tersedia. Harga dan detail mengikuti data katalog.</p>
+      </section>
+    </main>
+
+    <footer><a class="brand" href="#beranda"><span class="brand-mark" aria-hidden="true">P</span><span>Katalog<span class="brand-light">Penggaris</span></span></a><span>KATALOG PRODUK · INFORMASI BERSUMBER DARI DATA</span><a href="#beranda">Kembali ke atas ↑</a></footer>
+
+    <aside class="chat-widget" id="chat-widget" aria-label="Asisten katalog">
+      <section class="chat-panel" id="chat-panel" aria-label="Percakapan dengan asisten" hidden>
+        <header class="chat-header"><div class="assistant-avatar">✳</div><div><strong>Asisten Katalog</strong><span><i></i> Siap membantu mencari</span></div><button id="chat-close" class="icon-button" aria-label="Tutup chat">×</button></header>
+        <div class="chat-messages" id="chat-messages" aria-live="polite"><div class="message assistant-message">Halo! Saya bisa membantu mencari penggaris dari katalog. Coba tanya “penggaris 30 cm” atau “yang paling murah”.</div></div>
+        <div class="suggestions"><button type="button">Penggaris 30 cm</button><button type="button">Yang paling murah?</button></div>
+        <form id="chat-form" class="chat-form"><input id="chat-input" type="text" placeholder="Tanyakan tentang produk..." aria-label="Pesan untuk asisten" maxlength="500" autocomplete="off" required /><button type="submit" aria-label="Kirim pesan">↑</button></form>
+        <p class="chat-footnote">Jawaban berdasarkan katalog produk</p>
+      </section>
+      <button class="chat-launcher" id="chat-launcher" aria-expanded="false" aria-controls="chat-panel"><span class="launcher-sparkle">✳</span><span>Tanya asisten</span><span class="launcher-arrow">↗</span></button>
+    </aside>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

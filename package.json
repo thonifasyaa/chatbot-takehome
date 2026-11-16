@@ -1,0 +1,15 @@
+{
+  "name": "chatbot-takehome",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website katalog dan chatbot RAG dari data produk Shopee",
+  "scripts": {
+    "start": "node server.js",
+    "gateway": "node wa-gateway.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.34.8"
+  }
+}

@@ -1,0 +1,7 @@
+.env
+.env.*
+!.env.example
+node_modules/
+.vercel/
+.wwebjs_auth/
+.wwebjs_cache/
